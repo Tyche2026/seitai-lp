@@ -36,7 +36,7 @@
     </section>
 
     <!--悩み-->
-    <section class="trouble section">
+    <section class="trouble section fade">
         <div class="container">
             <h2>こんなお悩みありませんか？</h2>
             <ul>
@@ -48,7 +48,7 @@
     </section>
 
     <!--About-->
-    <section id="about" class="section">
+    <section id="about" class="about section fade">
         <div class="container about-wrap">
             <img src="images/about.jpg" alt="">
             <div class="about-text">
@@ -59,7 +59,7 @@
     </section>
 
     <!--Menu-->
-    <section id="menu" class="section">
+    <section id="menu" class="menu section fade">
         <div class="container">
             <h2>施術メニュー</h2>
             <div class="menu-list">
@@ -83,7 +83,7 @@
     </section>
 
     <!--Voice-->
-    <section id="voice" class="section voice">
+    <section id="voice" class="voice section fade">
         <div class="container">
             <h2>お客様の声</h2>
             <div class="voice-list">
@@ -102,7 +102,7 @@
     </section>
 
     <!--Trust-->
-    <section class="trust">
+    <section class="trust section fade">
         <h2>選ばれる理由</h2>
         <ul>
             <li>国家資格保有</li>
@@ -112,7 +112,7 @@
     </section>
 
     <!--CTA-->
-    <section id="contact" class="cta">
+    <section id="contact" class="cta section fade">
         <p class="cta-sub">今だけ初回50%OFF</p>
         <h2>ご予約・お問い合わせはこちら</h2>
         <a href="#" class="btn">今すぐ予約する</a>
@@ -121,6 +121,17 @@
     <footer>
         <p>ⓒ こころ整体院</p>
     </footer>
+
+    <script>
+    const fades = document.querySelectorAll('.fade');
+
+    window.addEventListener('scroll', () => {fades.forEach(el => {const rect = el.getBoundingClientRect().top;const windowHeight = window.innerHeight;
+    
+    if (rect < windowHeight - 100) {el.classList.add('show');
+       }
+     });
+    });
+    </script>
 
 </body>
 </html>

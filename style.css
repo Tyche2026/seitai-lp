@@ -269,6 +269,18 @@ footer {
     padding: 20px;
 }
 
+/* fade */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* responsive */
 @media (max-width: 768px) {
 
