@@ -11,17 +11,29 @@
 <body>
 
     <header class="site-header">
-        <div class="container">
-            <h1 class="logo">こころ整体院</h1>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="#about">特徴</a></li>
-                    <li><a href="#menu">施術</a></li>
-                    <li><a href="#voice">口コミ</a></li>
-                    <li><a href="#contact" class="nav-btn">📩 予約</a></li>
-                </ul>
-            </nav>
+        <div class="header-inner">
+         <div class="container">
+
+            <div class="logo">こころ整体院</div>
+            
+                <nav class="header-nav">
+                    <a href="trouble">悩み</a>
+                    <a href="#about">特徴</a>
+                    <a href="#menu">メニュー</a>
+                    <a href="#voice">口コミ</a>
+                    <a href="#contact">予約</a>
+                </nav>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>MENU</p>
+            </div>
+    
+         </div>
         </div>
+
     </header>
 
     <!--FV-->
@@ -36,7 +48,7 @@
     </section>
 
     <!--悩み-->
-    <section class="trouble section fade">
+    <section id="trouble" class="trouble section fade">
         <div class="container">
             <h2>こんなお悩みありませんか？</h2>
             <ul>
@@ -130,7 +142,21 @@
     if (rect < windowHeight - 100) {el.classList.add('show');
        }
      });
+
     });
+
+    </script>
+
+    <script>
+
+        const hamburger = document.getElementById('.hamburger');
+        const nav = document.querySelector('.header-nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle("active");
+        });
+
     </script>
 
 </body>
